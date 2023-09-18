@@ -10,7 +10,7 @@
  * replacing specifiers with additional arguments.
  * Supports 'c' for Character, 's' for String, and '%' for Percent sign.
  *
- * Returns: Number of characters printed (excluding null byte).
+ * Return: Number of characters printed (excluding null byte).
  */
 
 
