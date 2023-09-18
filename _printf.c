@@ -3,7 +3,7 @@
 #include <unistd.h>
 
 /**
- * _printf - A simplified printf.
+ * _printf - A simplified version of printf.
  * @format: Format string with text and specifiers.
  *
  * Writes the format string to stdout,
@@ -12,6 +12,7 @@
  *
  * Returns: Number of characters printed (excluding null byte).
  */
+
 
 int _printf(const char *format, ...)
 {
