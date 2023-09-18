@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdarg.h>
 #include <unistd.h>
 
@@ -29,7 +28,7 @@ int _printf(const char *format, ...)
 		i++;
 		if (format[i] == 'c')
 		{
-			char c = va_arg(args, int);
+			char c = (char)va_arg(args, int);
 
 			write(1, &c, 1);
 		} else if (format[i] == 's')
