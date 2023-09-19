@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _printf - A simplified version of printf.
  * @format: Format string with text and specifiers.
@@ -10,7 +9,6 @@
  *
  * Return: Number of characters printed excluding null byte.
  */
-
 int _printf(const char *format, ...)
 {
 	va_list args;
@@ -49,6 +47,11 @@ int _printf(const char *format, ...)
 				count += strlen;
 			}
 		}
+		else if (format[i] == 'd' || format[i] == 'i')
+		{	
+			count += printf_int(args);
+		}
+
 		else if (format[i] == '%')
 		{
 			write(1, &format[i], 1);

@@ -7,8 +7,8 @@
 #include <limits.h>
 #include <stdlib.h>
 
-
-
+int printf_int(va_list args);
+int _putchar(char c);
 int _printf(const char *format, ...);
 
 #endif /* MAIN_H */
