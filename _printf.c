@@ -14,7 +14,7 @@ int _printf(const char *format, ...)
 	va_list args;
 	int count = 0;
 	int i;
-	char *s;
+
 	va_start(args, format);
 	for (i = 0; format[i]; i++)
 	{
@@ -30,24 +30,14 @@ int _printf(const char *format, ...)
 		if (format[i] == 'c')
 		{
 			char c = (char)va_arg(args, int);
+
 			write(1, &c, 1);
 			count++;
 		}
 		else if (format[i] == 's')
-		{
-			int strlen = 0;
-			s = va_arg(args, char *);
-			while (s[strlen] != '\0')
-			{
-				strlen++;
-				write(1, s, strlen);
-				count += strlen;
-			}
-		}
+			count += printf_s(args);
 		else if (format[i] == 'd' || format[i] == 'i')
-		{	
 			count += printf_int(args);
-		}
 
 		else if (format[i] == '%')
 		{

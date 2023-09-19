@@ -6,7 +6,7 @@
 #include <unistd.h>
 #include <limits.h>
 #include <stdlib.h>
-
+int printf_s(va_list args);
 int printf_int(va_list args);
 int _putchar(char c);
 int _printf(const char *format, ...);
