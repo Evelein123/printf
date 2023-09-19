@@ -28,7 +28,7 @@ int _printf(const char *format, ...)
 		{
 		format++;
 		if (*format == '\0')
-			break;
+			return (-1);
 		if (*format == 'c')
 		{
 			char c = (char)va_arg(args, int);
