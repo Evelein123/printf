@@ -29,7 +29,7 @@ int _printf(const char *format, ...)
 		}
 		i++;
 		if (format[i] == '\0')
-			break;
+			return (-1);
 		if (format[i] == 'c')
 		{
 			char c = (char)va_arg(args, int);
