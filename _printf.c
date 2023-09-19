@@ -13,7 +13,6 @@
  * Return: Number of characters printed (excluding null byte).
  */
 
-
 int _printf(const char *format, ...)
 {
 	va_list args;
@@ -31,32 +30,25 @@ int _printf(const char *format, ...)
 			continue;
 		}
 		i++;
-		if (format[i] == '\0')
-			break;
 		if (format[i] == 'c')
 		{
 			char c = (char)va_arg(args, int);
 
 			write(1, &c, 1);
-			count++;
 		}
 		else if (format[i] == 's')
 		{
-			int strlen = 0;
-
 			s = va_arg(args, char *);
-			while (s[strlen] != '\0')
+			while (*s)
 			{
-				strlen++;
-				write(1, s, strlen);
-				count += strlen;
+				write(1, s++, 1);
 			}
 		}
 		else if (format[i] == '%')
 		{
 			write(1, &format[i], 1);
-			count++;
 		}
+		count++;
 	}
 	va_end(args);
 	return (count);
