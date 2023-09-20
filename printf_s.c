@@ -10,10 +10,11 @@ int printf_s(va_list args)
 	char *s;
 
 	s = va_arg(args, char *);
-	while (s[strlen] != '\0')
+	while (*s != '\0')
 	{
+
 		strlen++;
-		write(1, s, strlen);
+		write(1, s++, 1);
 	}
 	return (strlen);
 }
