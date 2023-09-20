@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * printf_s - prints string
+ * printf_s - print string
  * @args: arguement to print
  * Return: num of char printted
  */

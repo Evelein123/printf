@@ -1,10 +1,10 @@
 #include "main.h"
 /**
  * _printf - A simplified version of printf.
- * @format: Format string with text and specifiers.
+ * @format: Format string with text and specifier
  *
  * Writes the format string to stdout,
- * replacing specifiers with additional arguments.
+ * replacing specifiers with additional argument
  * Supports 'c' for Character, 's' for String, and '%' for Percent sign.
  *
  * Return: Number of characters printed excluding null byte.
