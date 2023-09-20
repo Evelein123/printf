@@ -12,7 +12,7 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int count = 0;
+	int count = 1;
 
 	if (format == NULL)
 		return (-1);
