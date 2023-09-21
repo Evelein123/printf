@@ -11,7 +11,7 @@ int printf_b(va_list args)
 
 	i = va_arg(args, int);
 	while (i != 0)
-	
+
 	{
 	if (i % 2 == 0)
 	{

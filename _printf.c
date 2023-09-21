@@ -30,12 +30,7 @@ int _printf(const char *format, ...)
 		if (*format == '\0')
 			return (-1);
 		if (*format == 'c')
-		{
-			char c = (char)va_arg(args, int);
-
-			write(1, &c, 1);
-			count++;
-		}
+			count += printf_c(args);
 		else if (*format == 'b')
 			count += printf_b(args);
 		else if (*format == 's')
