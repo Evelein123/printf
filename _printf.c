@@ -36,6 +36,8 @@ int _printf(const char *format, ...)
 			write(1, &c, 1);
 			count++;
 		}
+		else if (*format == 'b')
+			count += printf_b(args);
 		else if (*format == 's')
 			count += printf_s(args);
 		else if (*format == 'd' || *format == 'i')
