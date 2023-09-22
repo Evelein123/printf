@@ -45,6 +45,8 @@ int _printf(const char *format, ...)
 		}
 		format++;
 	}
+	if (*format == '\0')
+		return (-1);
 	va_end(args);
 	return (count);
 
