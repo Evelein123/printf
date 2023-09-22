@@ -8,7 +8,7 @@ int printf_b(va_list args)
 {
 	int j = 0;
 	int place;
-	int i;
+	unsigned int i;
 	int bin[32];
 
 	i = va_arg(args, int);
