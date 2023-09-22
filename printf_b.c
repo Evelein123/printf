@@ -10,8 +10,9 @@ int printf_b(va_list args)
 	int place;
 	int i;
 	int bin[32];
+
 	i = va_arg(args, int);
-	
+
 	if (i == 0)
 	{
 		_putchar('0');
