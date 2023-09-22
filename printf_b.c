@@ -17,20 +17,21 @@ int printf_b(va_list args)
 		_putchar('0');
 		return (0);
 	}
-	while (i > 0)
+	while (i >= 1)
 	{
+		if (i == 0)
+			break;
 		bin[j] = i % 2;
 		i /= 2;
-		/*place *= 10;*/
 		j++;
 	}
-	place = j;
+	place = j - 1;
 
-	while (place > 0)
+	while (place >= 0)
 	{
 		_putchar(bin[place] + '0');
 		place--;
 	}
 
-	return (j);
+	return (j - 1);
 }
