@@ -6,25 +6,31 @@
  */
 int printf_b(va_list args)
 {
+	int j = 0;
+	int place;
 	int i;
-	int count = 1;
-
+	int bin[32];
 	i = va_arg(args, int);
-	while (i != 0)
-
-	{
-	if (i % 2 == 0)
+	
+	if (i == 0)
 	{
 		_putchar('0');
-		i /= 2;
-		count++;
+		return (0);
 	}
-	else if (i % 2 == 1)
+	while (i > 0)
 	{
-		_putchar('1');
+		bin[j] = i % 2;
 		i /= 2;
-		count++;
+		/*place *= 10;*/
+		j++;
 	}
+	place = j;
+
+	while (place >= 0)
+	{
+		_putchar(bin[place] + '0');
+		place--;
 	}
-	return (count);
+
+	return (j);
 }

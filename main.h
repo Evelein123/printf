@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include <limits.h>
 #include <stdlib.h>
+int printf_bi(int n);
 int printf_c(va_list args);
 int printf_b(va_list args);
 int printf_s(va_list args);
