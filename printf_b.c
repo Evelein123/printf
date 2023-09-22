@@ -26,7 +26,7 @@ int printf_b(va_list args)
 	}
 	place = j;
 
-	while (place >= 0)
+	while (place > 0)
 	{
 		_putchar(bin[place] + '0');
 		place--;
