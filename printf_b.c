@@ -34,5 +34,5 @@ int printf_b(va_list args)
 		place--;
 	}
 
-	return (j);
+	return (j - 1);
 }
